@@ -1,6 +1,7 @@
 # Computation
 
 ## overview
+
 - simplicity
   - turing machine
   - lambda calc
