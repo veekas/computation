@@ -29,14 +29,12 @@ def simulate(instructions):
 
   # loop:
   for _ in range(8):
+    # print statements just show results in console, not necessary for machine
     print(state.rjust(2) + ": " + "".join(tape))
     print("    " + " " * head + "^")
   # look up instruction
-    key = (tape[head], state)
-    tape_sym, head_dir, new_state = instructions[key]
+    tape[head], head_dir, state = instructions[(tape[head], state)]
   # apply that instruction to the machine
-    tape[head] = tape_sym
     head += 1 if head_dir == "R" else - 1
-    state = new_state
 
 simulate(X_B)
