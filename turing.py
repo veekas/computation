@@ -5,11 +5,6 @@
 # X_B machine
   # changes B -> X and vice versa
   # also need a state symbol s1..s4 to ensure one state per instruction
-  # example
-    # B, s1 -> X and move head to the right     , s2
-    # B, s2 -> B and move head back to the left , s3
-    # X, s3 -> B and move head to the right     , s4
-    # B, s4 -> B and move head back to the left , s1
 
 X_B = {
     ("B", "s1"): ("X", "R", "s2"),
@@ -20,11 +15,8 @@ X_B = {
 
 def simulate(instructions):
   # set up initial state (ideally not hardcoded like below)
-  # tape
   tape = ["B", "B"]
-  # head
   head = 0
-  # state
   state = "s1"
 
   # loop:
