@@ -27,7 +27,8 @@ print(
               lambda acc: (
                   lambda n: lambda m: n(
                     lambda n: lambda f: lambda x: f(n(f)(x))
-                  )(m)
+                  )
+                  (m)
               )
               (m)
               (acc)
@@ -79,7 +80,8 @@ print(
               lambda acc: (
                 lambda n: lambda m: n(
                   lambda n: lambda f: lambda x: f(n(f)(x))
-                )(m)
+                )
+                (m)
               )
               (m)
               (acc)
